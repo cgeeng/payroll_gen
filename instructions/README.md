@@ -221,7 +221,7 @@ When you are completed, you need to submit your code to gradescope. Go back to C
 
 1. Learning (AG)
    * Code compiles without issue
-   * Code passes all tests both provided and additionally added Greeter.java
+   * Code passes all tests 
 2. Approaching (AG)
    * Passes the style check.  
 3. Meets (MG)
