@@ -12,9 +12,21 @@
     - [Submission Reminder 🚨](#submission-reminder-)
     - [Autograder Limitation](#autograder-limitation)
   - [Resources](#resources)
+    - [String Splitting](#string-splitting)
+    - [Rouding to 2 Decimal Places](#rouding-to-2-decimal-places)
+    - [Reading Files](#reading-files)
+    - [Streams](#streams)
+    - [Testing File Contents](#testing-file-contents)
 
 
 ## Learning Objectives
+* Designing with inheritance and polymorphism in java
+* Practicing Test Driven Development
+* Implementing a class hierarchy in Java
+* Implementing junit tests for all methods
+* Making use of java collections/lists
+* Explore the use of streams in Java
+* Practice reading and writing files in Java
 
 
 ## Instructions
@@ -55,4 +67,71 @@ Currently the autograder is limited in how it can test. As such, when it comes a
 
 ## Resources
 
-Additional resources to help you out.
+Different resources that may help you out. Don't forget to check the course [Resources](https://github.com/CS5004-khoury-lionelle/Resources) page for reminders on markdown, git, and other resources.
+
+
+### String Splitting
+* [String Split - W3Schools](https://www.w3schools.com/java/ref_string_split.asp)
+* [String Split Examples - Geeks4Geeks](https://www.geeksforgeeks.org/split-string-java-examples/)
+* [Java String Javadoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html)
+* [String Split Javadoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/String.html#split(java.lang.String))
+
+### Rouding to 2 Decimal Places
+* [Big Decimal Example](https://www.baeldung.com/java-round-decimal-number#rounding-doubles-with-bigdecimal)
+* [Big Decimal Javadoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/math/BigDecimal.html)
+* [Number Formatting in Java](https://www.baeldung.com/java-number-formatting)
+
+### Reading Files
+* [Reading Files in Java](https://www.geeksforgeeks.org/different-ways-reading-text-file-java/)
+* [Files Javadoc](https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/file/Files.html)
+
+### Streams
+* [Streams Tutorial (more advanced)](https://www.baeldung.com/java-8-streams)
+* Make sure you go back to Team Activity 04 for a refresher on Streams
+
+### Testing File Contents
+
+* [JUnit @TempDir Example (more advanced)](https://www.baeldung.com/junit-5-temporary-directory)
+
+
+The more common way in JUnit to test files is to make use of the @TempDir, it can be easy to test the contents of a file by reading it in and comparing it to a string. Here is an example of how you might do that:
+
+```java
+    @TempDir
+    static Path tempDir;
+
+    @Test
+    public void testFinalPayStub() throws IOException {
+        // copy employees.csv into tempDir
+        Path employees = tempDir.resolve("employees.csv");
+        Files.copy(Paths.get("resources/employees.csv"), employees);
+
+        // get the path of the paystubs.csv
+        Path payStubs = tempDir.resolve("paystubs.csv");
+
+
+
+        String[] args = {"-e", employees.toString(), "-t", 
+                "resources/time_cards.csv",
+                "-o", payStubs.toString()};
+
+        // run main method
+        PayrollGenerator.main(args);
+
+
+
+        String expectedPayStubs = Files
+                .readString(Paths.get("resources/original/pay_stubs_solution_to_original.csv"));
+
+        String actualPayStubs = Files.readString(payStubs);
+
+        assertEquals(expectedPayStubs, actualPayStubs);
+
+
+        // you could also read lines and compared the lists
+
+
+    }
+```
+
+Remember when you test files, it is good to have multiple input/output files to test against! This requires setting a series of resources to help you out, and often manually calculating the expected output. 
