@@ -23,6 +23,7 @@ In this assignment, you will be building a simple payroll generator that reads i
     - [Required Files and Constructors](#required-files-and-constructors)
     - [:fire: Task 1: Design](#fire-task-1-design)
     - [:fire: Task 2: Implement by Test Driven Development](#fire-task-2-implement-by-test-driven-development)
+      - [:raising\_hand: Implementation Tips](#raising_hand-implementation-tips)
       - [Final Run Tests](#final-run-tests)
     - [:fire: Task 3: Finish Design Document](#fire-task-3-finish-design-document)
     - [:fire: Task 4: Finish Report.md](#fire-task-4-finish-reportmd)
@@ -124,6 +125,63 @@ Note: you often don't know all the tests as you write. As such, it is alright to
 > [!CAUTION]
 > Make sure to commit as you development. The bare minimum commits would be after every test, but you probably will have additional commits especially at the beginning. 
 
+#### :raising_hand: Implementation Tips
+
+Here are a few tips to help you implement the program:
+
+1. An PayStub can have a reference to the employee (as compared to copying all the info). 
+
+2. You can use the `String.split(",")` method to split a line of a csv file into an array of strings. For example:  
+   ```java
+   String line = "HOURLY,John Doe,12345,15.00,100.0,1000.00,100.00";
+   String[] parts = line.split(",");`
+   // then each part can be accessed by the index
+   if(parts[0].equals("HOURLY")) {
+       // do something
+   }
+   String name = parts[1]; // etc
+   ```
+   You can check to see if a line is correct by checking the length of the array.
+   ```java
+   if(parts.length != 7) {
+       // throw an exception or something
+   }
+   ```
+3. Don't forget to use try/catch around converting strings to doubles. If you don't, your program will crash if the file is not formatted correctly.
+   ```java
+   double payRate;
+   try {
+       payRate = Double.parseDouble(parts[3]);
+   } catch(NumberFormatException e) {
+       // handle the error
+   }
+   ```
+4. You can use format, round, or BigDecimal to round to two decimal places. 
+   ```java
+   BigDecimal bd = new BigDecimal(value).setScale(2, RoundingMode.HALF_UP);
+   double rounded = bd.doubleValue();
+   ```
+   You  may even just want to store values as BigDecimal, and convert to double on request.
+   To do this, you need to use some of methods built into BigDecimal like `add`, `subtract`, `multiply`, and `divide`. 
+   ```java
+   public void doSomething(double val) {
+      // assume value is a BigDecimal
+      BigDecimal bd2 = new BigDecimal(val);
+      this.value = value.add(bd2).setScale(2, RoundingMode.HALF_UP);
+   }
+
+   public double getValue() {
+      return value.doubleValue();
+   }
+   ```
+5. If you want to add a method to make sure your code compiles, but not implement it yet, you can use `throw new UnsupportedOperationException("Not implemented yet")`. This will throw an exception if the method is called, but allow you to compile and test other parts of your code.
+   ```java
+   public void doSomething() {
+       throw new UnsupportedOperationException("doSomething() Not implemented yet");
+   }
+   ```
+   
+Above all, make sure you test each method as you write it. This is the key to TDD, but also will make your final testing much, much easier.  Lastly, don't forget the design you learned in CS 5001! This isn't 100% new even if the syntax/language makes it feel all new. So it may help to ask yourself how you would do it in python.
 
 
 #### Final Run Tests

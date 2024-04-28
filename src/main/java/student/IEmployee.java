@@ -76,6 +76,8 @@ public interface IEmployee {
      * 
      * Final net pay is calculated as pay - pretaxDeductions - taxes.
      * 
+     * All numbers (across all methods) are rounded to the nearest cent. (2 decimal places)
+     * 
      * @param hoursWorked the hours worked for the pay period
      * 
      * @return the pay stub for the current pay period
