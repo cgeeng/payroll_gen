@@ -4,7 +4,33 @@ This report helps you demonstrate your understanding of the concepts. You should
 
 ## Technical Questions
 
+1. What does CSV stand for? 
+   
 
+2. Why would you declare `List<IEmployee>` instead of `ArrayList<HourlyEmployee>`?
+
+3. When you have one class referencing another object, such as storing that object as one of the attributes of the first class - what type of relationship is that called (between has-a and is-a)?
+
+4. Can you provide an example of a has-a relationship in your code (if one exists)?
+
+
+5. Can you provide an example of an is-a relationship in your code (if one exists)?
+
+
+6. What is the difference between an interface and an abstract class?
+
+
+7. What is the advantage of using an interface over an abstract class?
+
+
+8. Is the following code valid or not? `List<int> numbers = new ArrayList<int>();`, explain why or why not. If not, explain how you can fix it. 
+
+
+9. Which class/method is described as the "driver" for your application? 
+
+
+
+10. How do you create a temporary folder for JUnit Testing? 
 
 
 ## Deeper Thinking 
