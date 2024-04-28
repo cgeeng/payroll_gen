@@ -3,7 +3,7 @@ package student;
 /**
  * An interface for the concept of the pay stub.
  * 
- * DO NOT MODIFY THIS FILE! (unless you are cleaning up comments/style changes)
+ * You are free to modify this file as needed, but make sure the name remains the same.
  * 
  */
 public interface IPayStub {
