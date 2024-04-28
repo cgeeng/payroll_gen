@@ -132,7 +132,7 @@ We have provided a sample test that helps test the final implementation of your 
 
 > [!NOTE]
 > A common question is "how many tests". The answer is that it isn't a number but that you test
-> all paths, no just the "happy path". This means you need to test edge cases, and make
+> all paths, not just the "happy path". This means you need to test edge cases, and make
 > sure everything is tested. Being complete in your testing, will make it much easier when working with the autograder (often common issues are style more than functionality if you
 > are complete in testing). 
 > 
