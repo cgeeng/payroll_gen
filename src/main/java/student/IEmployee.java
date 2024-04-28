@@ -67,6 +67,15 @@ public interface IEmployee {
      * taxes are calculated as 1.45% for medicare, 6.2% for social security, and 15% for
      * withholding. or 22.65% total. They are calculated on the net pay (after pretax deductions).
      * 
+     * For hourly employees, the pay is calculated as payRate * hoursWorked for the first 40 hours,
+     * then payRate * 1.5 * (hoursWorked - 40) for overtime.
+     * 
+     * For salary employees, it is pay rate divided by 24 for two payments every month.
+     * 
+     * If either type of employee has < 0 hours, they are skipped this payroll period.
+     * 
+     * Final net pay is calculated as pay - pretaxDeductions - taxes.
+     * 
      * @param hoursWorked the hours worked for the pay period
      * 
      * @return the pay stub for the current pay period
