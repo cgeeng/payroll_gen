@@ -17,11 +17,16 @@ In this assignment, you will be building a simple payroll generator that reads i
   - [Table of Contents](#table-of-contents)
   - [Learning Objectives](#learning-objectives)
   - [Instructions](#instructions)
+    - [Provided Files](#provided-files)
+      - [Java Files](#java-files)
+      - [Resources](#resources)
+    - [Required Files and Constructors](#required-files-and-constructors)
+    - [:fire: Task 1: Design](#fire-task-1-design)
   - [Submission](#submission)
   - [📝 Grading Rubric](#-grading-rubric)
     - [Submission Reminder 🚨](#submission-reminder-)
     - [Autograder Limitation](#autograder-limitation)
-  - [Resources](#resources)
+  - [Resources](#resources-1)
     - [String Splitting](#string-splitting)
     - [Rouding to 2 Decimal Places](#rouding-to-2-decimal-places)
     - [Reading Files](#reading-files)
@@ -44,6 +49,60 @@ In this assignment, you will be building a simple payroll generator that reads i
 > [!IMPORTANT]
 > This is a two week assignment, spanning multiple modules. It is best to break up the work over those weeks, and not try to do it all in one week. We suggest week one, you focus on design, and the inheritance hierarchy, and then week two you focus on reading/writing files, the main driver method, and your final report.
 
+In this assignment, you will be building a simple payroll generator that reads in employee information and time cards, and then generates pay stubs for each employee. 
+
+As input, the program takes in (as command line arguments), the employee.csv file, the time_cards.csv file, and the path to the expected output file pay stubs file. Every time the program is ran, it will update (overwrite) the employee.csv which keeps a history of total pay and taxes paid, and will generate a new pay stubs file. The final design of this program is up to you, given the specifications provided! As such, this is both an exercise in design and in implementation.
+
+### Provided Files
+We have provided a few files for you. Please read this list carefully, as it will help you understand the requirements of the program.
+
+
+#### Java Files
+* **IEmployee.java** - an interface that all employees must implement. **DO NOT CHANGE THIS FILE**. We are providing this file as a contract for you to follow, and use it directly in our grading tests. 
+  * Within this file, each methods purpose and constraints are detailed in the javadoc. Make sure to read this carefully.
+* **IPayStub.java** - an interface that all pay stubs must implement. You can change this file, as we only grade the final output of paystubs, but we needed to include the interface for IEmployee. 
+* **FileUtil.java**- This file contains methods that read and write lists from and to files. You can use this as is or you can modify it. Most students will leave this file unchanged. We provided this so you didn't have to know how to write to files in Java (at this time), but we will ask questions about it. 
+* **PayrollGenerator.java** - This is the main driver class for the program. You will need to implement the main method in this class. We have provided some guidance in the file on using FileUtil.java to read and write files. You do not have to use it this way. 
+  * DO NOT CHANGE the Arguments inner class, and make sure to use it in your code to get the file names. This will allow us to change the program arguments to test your code.
+
+#### Resources
+We have provided a number of .csv files in the resources folder. These files are used to test your program. They are also the 'default' locations for files in your program. We suggest looking at them so you can come up with your own test files, especially time_cards.csv. It is pretty happy path in what is in there, and you may want to write another time_cards.csv that has negative values and other edge cases.
+
+
+### Required Files and Constructors
+
+In addition to the files provided, at a bare minimum (you will have more), you will need to implement the following classes:
+* HourlyEmployee
+* SalariedEmployee
+
+The HourlyEmployee needs the following constructor  
+* `public HourlyEmployee(String name, String id, double payRate, double ytdEarnings, double ytdTaxesPaid, double pretaxDeductions)`
+
+The SalariedEmployee needs the following constructor 
+* `public SalaryEmployee(String name, String id, double payRate, double ytdEarnings, double ytdTaxesPaid, double pretaxDeductions)`
+
+
+> [!TIP] 
+> The constructor is the same for both, but the classes are different. 
+
+
+> [!WARNING]
+> Don't forget that Employee.csv is in the order of 
+> ```csv
+> employee_type,name,ID,payRate,pretaxDeductions,YTDEarnings,YTDTaxesPaid
+> ```
+>So be careful and think about what you are doing when you are reading in the contents of a line.
+
+
+### :fire: Task 1: Design 
+
+Before you start writing, it is important to think about design. You DO NOT have to be perfect in your design, so we will come back to this step a few times. 
+
+1. First, become a detective and read through the files provided - both the .csv file and the java files. Take notes on what you are seeing (such as ordering of the csv lines).  This is a common skill in software engineering, and you will need to do this often as you work with other people's code.
+2. Go to [DesignDocument.md](DesignDocument.md) and fill out (ONLY) the initial design section.
+
+> [!TIP]
+> You are free  to use mermaid or any other UML tools you want, just make sure if you are using another UML tool, you properly link the image in the markdown file. See the resources page, for a list of [UML tools](https://github.com/CS5004-khoury-lionelle/Resources?tab=readme-ov-file#uml-design-tools).
 
 ## Submission
 
