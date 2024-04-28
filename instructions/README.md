@@ -24,6 +24,8 @@ In this assignment, you will be building a simple payroll generator that reads i
     - [:fire: Task 1: Design](#fire-task-1-design)
     - [:fire: Task 2: Implement by Test Driven Development](#fire-task-2-implement-by-test-driven-development)
       - [Final Run Tests](#final-run-tests)
+    - [:fire: Task 3: Finish Design Document](#fire-task-3-finish-design-document)
+    - [:fire: Task 4: Finish Report.md](#fire-task-4-finish-reportmd)
   - [Submission](#submission)
   - [📝 Grading Rubric](#-grading-rubric)
     - [Submission Reminder 🚨](#submission-reminder-)
@@ -101,7 +103,7 @@ The SalariedEmployee needs the following constructor
 Before you start writing, it is important to think about design. You DO NOT have to be perfect in your design, so we will come back to this step a few times. 
 
 1. First, become a detective and read through the files provided - both the .csv file and the java files. Take notes on what you are seeing (such as ordering of the csv lines).  This is a common skill in software engineering, and you will need to do this often as you work with other people's code.
-2. Go to [DesignDocument.md](DesignDocument.md) and fill out (ONLY) the initial design section.
+2. Go to [DesignDocument.md](../DesignDocument.md) and fill out (ONLY) the initial design section.
 
 > [!TIP]
 > You are free  to use mermaid or any other UML tools you want, just make sure if you are using another UML tool, you properly link the image in the markdown file. See the resources page, for a list of [UML tools](https://github.com/CS5004-khoury-lionelle/Resources?tab=readme-ov-file#uml-design-tools).
@@ -123,6 +125,7 @@ Note: you often don't know all the tests as you write. As such, it is alright to
 > Make sure to commit as you development. The bare minimum commits would be after every test, but you probably will have additional commits especially at the beginning. 
 
 
+
 #### Final Run Tests
 
 We have provided a sample test that helps test the final implementation of your program. It is only one run, and not the only path (and only checks one file!). Use that as a template to write your own tests.  
@@ -136,6 +139,18 @@ We have provided a sample test that helps test the final implementation of your 
 > Also to be clear, you do not need to test the provided code - UNLESS you modify it! If you modify it, then you need to make sure there are tests for it. 
 
 
+### :fire: Task 3: Finish Design Document
+
+By this point, your design has probably changed (very few people have perfect designs the first iteration). Update your design document with the final design in the "final design" section. We want to see the history of your first design to your final design. That is a good thing. 
+
+
+### :fire: Task 4: Finish Report.md
+
+Inside of [Report.md](../Report.md) you will need to answer a series of questions about your program, and about the learning objectives for the module in general. Fill it out. 
+
+
+> [!IMPORTANT]
+> A primary purpose of this activity is to get you working through a process in addition to writing code. In software engineering the process you follow is often just as important as the code you write. This is because the process is what allows you to work with others, and to be able to maintain and update code over time. It may seem tedious right now, but it is a skill that will pay off in the long run.
 
 
 
