@@ -1,9 +1,19 @@
-# Payroll Generator
+# Payroll Generator Homework Instructions
+
+Payroll is a tedious but important task for companies. It is also a very complex task as companies grow and expand often to multiple regions in the world. Adding to the complexity is the ability to work remotely, so then systems need to be able to track a series of differences given employee type, benefits, roles, taxes, regionals laws, etc. 
+
+When computers first came out, one of their first business applications was focused on accounting and accurately calculating payroll. At the time most of the payroll systems were custom applications writing in [FORTRAN](https://en.wikipedia.org/wiki/Fortran) due to its strength in accurate math calculations. Another popular language for early applications was [COBOL](https://en.wikipedia.org/wiki/COBOL) due to its ability to handle large amounts of data. It was one of the first compiled languages developed by [Admiral Grace Murray-Hopper](https://en.wikipedia.org/wiki/Grace_Hopper)'s team in the 1950s.
+
+The languages used and design of payroll applications have changed over time, but the need for accurate payroll calculations has not.
+
+In this assignment, you will be building a simple payroll generator that reads in employee information and time cards, and then generates pay stubs for each employee.
 
 
+> [!NOTE]
+> If you are curious about the popularity of languages, here is a nice data visualization of the [most popular programming languages](https://www.youtube.com/watch?v=qQXXI5QFUfw) over time. In the end, a language is just a tool, and the most important thing is to understand the concepts behind the language. Also, there is some misleading data, as typescript is a  javascript replacement, so as it grows, javascript shrinks. Same with Kotlin for Java.
 
 ## Table of Contents
-- [Payroll Generator](#payroll-generator)
+- [Payroll Generator Homework Instructions](#payroll-generator-homework-instructions)
   - [Table of Contents](#table-of-contents)
   - [Learning Objectives](#learning-objectives)
   - [Instructions](#instructions)
@@ -30,6 +40,9 @@
 
 
 ## Instructions
+
+> [!IMPORTANT]
+> This is a two week assignment, spanning multiple modules. It is best to break up the work over those weeks, and not try to do it all in one week. We suggest week one, you focus on design, and the inheritance hierarchy, and then week two you focus on reading/writing files, the main driver method, and your final report.
 
 
 ## Submission
