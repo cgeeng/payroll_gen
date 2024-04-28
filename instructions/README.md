@@ -227,9 +227,21 @@ When you are completed, you need to submit your code to gradescope. Go back to C
 3. Meets (MG)
    * README.md is filled out (name, github repo, etc) 
      * With out the link to your repo, the TAs won't grade the rest!
-   * 
+   * DesignDocument (INITIAL) sections are filled out 
+   * Proper use of polymorphic declaration for example: `List<IEmployee> employees = new ArrayList<>();`
+   * All methods are tested with JUnit tests
+   * Method contain proper javadoc comments (not just javadoc notation but proper wording in the comment)
+   * Report.md technical questions are questions answered correctly.
 4. Exceeds (MG)
-   * 
+   * Code is DRY (Don't Repeat Yourself)
+   * Student uses proper inheritance without duplication for Employee Structures
+   * Student uses proper inheritance without duplication for PayStub Structures
+   * Methods include tests for edge cases in addition to happy path
+   * Design document (FINAL) sections are filled out 
+     * The notation needs to be correct, and the TAs will double check the final design
+     matches the final implementation.
+   * Report.md Deeper Thinking question filled out
+     * Includes at least two references/citations
 
 Legend:
 * AG - Auto-graded
