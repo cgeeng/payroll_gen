@@ -22,6 +22,8 @@ In this assignment, you will be building a simple payroll generator that reads i
       - [Resources](#resources)
     - [Required Files and Constructors](#required-files-and-constructors)
     - [:fire: Task 1: Design](#fire-task-1-design)
+    - [:fire: Task 2: Implement by Test Driven Development](#fire-task-2-implement-by-test-driven-development)
+      - [Final Run Tests](#final-run-tests)
   - [Submission](#submission)
   - [📝 Grading Rubric](#-grading-rubric)
     - [Submission Reminder 🚨](#submission-reminder-)
@@ -103,6 +105,39 @@ Before you start writing, it is important to think about design. You DO NOT have
 
 > [!TIP]
 > You are free  to use mermaid or any other UML tools you want, just make sure if you are using another UML tool, you properly link the image in the markdown file. See the resources page, for a list of [UML tools](https://github.com/CS5004-khoury-lionelle/Resources?tab=readme-ov-file#uml-design-tools).
+
+
+### :fire: Task 2: Implement by Test Driven Development
+
+After your initial design, you should seek to follow the TDD process. This means you should write tests first, and then implement the code to pass those tests. Or better stated, you should write *ONE* test first, implement, and repeat until you have written all your tests. 
+
+1. Figure out a number of tests by brainstorming (done in design)
+2. Write **one** test
+3. Write **just enough** code to make that test pass
+4. Refactor/update  as you go along
+5. Repeat steps 2-4 until you have all the tests passing/fully built program
+
+Note: you often don't know all the tests as you write. As such, it is alright to continue to expand your list. This is where people get stuck on TDD. They think they have to know **all** the tests before they start. You don't. You just need to know the next test, and then at the end you double check you have covered all code paths and have full coverage. 
+
+> [!CAUTION]
+> Make sure to commit as you development. The bare minimum commits would be after every test, but you probably will have additional commits especially at the beginning. 
+
+
+#### Final Run Tests
+
+We have provided a sample test that helps test the final implementation of your program. It is only one run, and not the only path (and only checks one file!). Use that as a template to write your own tests.  
+
+> [!NOTE]
+> A common question is "how many tests". The answer is that it isn't a number but that you test
+> all paths, no just the "happy path". This means you need to test edge cases, and make
+> sure everything is tested. Being complete in your testing, will make it much easier when working with the autograder (often common issues are style more than functionality if you
+> are complete in testing). 
+> 
+> Also to be clear, you do not need to test the provided code - UNLESS you modify it! If you modify it, then you need to make sure there are tests for it. 
+
+
+
+
 
 ## Submission
 
