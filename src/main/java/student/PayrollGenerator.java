@@ -7,18 +7,17 @@ import java.util.LinkedList;
 /**
  * Main driver for the PayrollGenerator program.
  * 
- * Students, you are free to modify this file as needed, but you need to leave in the parts were we
+ * Students, you are free to modify this file as needed, but you need to leave in the parts where we
  * can pass in the employee and payroll files as arguments.
  * 
  * Grading wise, we will both be using unit tests, and running your program with different employee
- * fils. We also will create a separate output file for each.
+ * files. We also will create a separate output file for each.
  * 
  * 
  * To run the program, you can use the following command:
  * 
- * java student.PayrollGenerator -i employees_mine.csv -o pay_stubs_mine.csv or java
- * student.PayrollGenerator The above defaults to using employees.csv as the input file and
- * pay_stubs.csv as the output file.
+ * java student.PayrollGenerator -e employees_mine.csv -t time_cards.csv -o pay_stubs_mine.csv or
+ * java student.PayrollGenerator The above defaults listed below.
  **/
 public final class PayrollGenerator {
     /** default file name for employees. */
