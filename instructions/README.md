@@ -78,12 +78,12 @@ We have provided a number of .csv files in the resources folder. These files are
 
 In addition to the files provided, at a bare minimum (you will have more), you will need to implement the following classes:
 * HourlyEmployee
-* SalariedEmployee
+* SalaryEmployee
 
 The HourlyEmployee needs the following constructor  
 * `public HourlyEmployee(String name, String id, double payRate, double ytdEarnings, double ytdTaxesPaid, double pretaxDeductions)`
 
-The SalariedEmployee needs the following constructor 
+The SalaryEmployee needs the following constructor 
 * `public SalaryEmployee(String name, String id, double payRate, double ytdEarnings, double ytdTaxesPaid, double pretaxDeductions)`
 
 
