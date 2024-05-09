@@ -26,9 +26,9 @@ Write a test (in english) that you can picture for the class diagram you have cr
 
 You should feel free to number your brainstorm. 
 
-1. Test 1..
-2. Test 2...
-
+1. Test that the `Employee` class properly returns `name` from `getName()`
+2. Test that the `Employee` class properly returns `id` from `getId()`
+3. continue to add your brainstorm here (you don't need to super formal - this is a brainstorm) - yes, you can change the bullets above to something that fits your design.
 
 
 
