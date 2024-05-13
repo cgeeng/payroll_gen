@@ -312,13 +312,16 @@ The more common way in JUnit to test files is to make use of the @TempDir, it ca
 
 
 
+      try {
         String expectedPayStubs = Files
                 .readString(Paths.get("resources/original/pay_stubs_solution_to_original.csv"));
 
         String actualPayStubs = Files.readString(payStubs);
 
         assertEquals(expectedPayStubs, actualPayStubs);
-
+      } catch (IOException e) {
+        fail("Error reading files");
+      }
 
         // you could also read lines and compared the lists
 
