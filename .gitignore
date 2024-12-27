@@ -32,3 +32,5 @@ build
 # ingore ide files
 .vscode
 idea/
+
+bin
