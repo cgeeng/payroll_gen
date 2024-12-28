@@ -59,7 +59,7 @@ public final class PayrollGenerator {
         List<IPayStub> payStubs = new LinkedList<>();
 
 
-        // now we suggest looping through the timeCardsList and for each timecard, find
+        // now we suggest looping through the timeCardList and for each timecard, find
         // the matching employee and generate a new paystub object. Then add that paystub
         // to the payStubs list. - remember, you can use the employee ID to match the employee
         // to the time card. Also remember if the value is negative, you just skip that payStub
