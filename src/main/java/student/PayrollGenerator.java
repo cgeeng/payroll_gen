@@ -18,6 +18,9 @@ import java.util.LinkedList;
  * 
  * java student.PayrollGenerator -e employees_mine.csv -t time_cards.csv -o pay_stubs_mine.csv or
  * java student.PayrollGenerator The above defaults listed below.
+ * 
+ * We also suggest meeting with a TA and learning how to add command line arguments
+ * in your IDE, as it will make testing and debugging easier.
  **/
 public final class PayrollGenerator {
     /** default file name for employees. */
