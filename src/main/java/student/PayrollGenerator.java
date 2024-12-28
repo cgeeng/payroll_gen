@@ -50,21 +50,35 @@ public final class PayrollGenerator {
         List<String> employeeLines = FileUtil.readFileToList(arguments.getEmployeeFile());
         List<String> timeCards = FileUtil.readFileToList(arguments.getTimeCards());
 
+        List<IEmployee> employees = employeeLines.stream().map(Builder::buildEmployeeFromCSV)
+                .collect(Collectors.toList());
 
-        // Create your driver - you can do it here, or call other methods, or change this
-        // main completely minus using the arguments!
+        List<ITimeCard> timeCardList = timeCards.stream().map(Builder::buildTimeCardFromCSV)
+                .collect(Collectors.toList());
 
-        // now save out employees to a new file
+        List<IPayStub> payStubs = new LinkedList<>();
 
-        // example of how we saved out files! You don't have to follow, depends
-        // on how you want to implement the program
-        /*
-         * employeeLines = employees.stream().map(IEmployee::toCSV).collect(Collectors.toList());
-         * employeeLines.add(0, FileUtil.EMPLOYEE_HEADER);
-         * FileUtil.writeFile(arguments.getEmployeeFile(), employeeLines);
-         */
 
-        // now save out the pay stubs
+        // now we suggest looping through the timeCardsList and for each timecard, find
+        // the matching employee and generate a new paystub object. Then add that paystub
+        // to the payStubs list. - remember, you can use the employee ID to match the employee
+        // to the time card. Also remember if the value is negative, you just skip that payStub
+        // as it is invalid, but if is 0, you still generate a paystub, but the amount is 0.
+
+        //YOUR CODE HERE
+      
+
+         // now save out employees to a new file
+
+         employeeLines = employees.stream().map(IEmployee::toCSV).collect(Collectors.toList());
+         employeeLines.add(0, FileUtil.EMPLOYEE_HEADER);
+         FileUtil.writeFile(arguments.getEmployeeFile(), employeeLines);
+ 
+         // now save out the pay stubs
+         List<String> payStubLines = payStubs.stream().filter(x -> x != null).map(IPayStub::toCSV)
+                 .collect(Collectors.toList());
+         payStubLines.add(0, FileUtil.PAY_STUB_HEADER);
+         FileUtil.writeFile(arguments.getPayrollFile(), payStubLines);
 
     }
 

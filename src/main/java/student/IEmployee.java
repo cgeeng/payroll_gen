@@ -1,5 +1,6 @@
 package student;
 
+
 /**
  * An interface for the concept of the employee.
  * 
@@ -32,6 +33,17 @@ public interface IEmployee {
     double getPayRate();
 
 
+    /**
+     * Gets the employee's Type as a string.
+     * 
+     * Either "HOURLY" or "SALARY" depending on the type of employee.
+     * 
+     * You may want to consider using an enum to store
+     * the type, and using .name() to get the string representation.
+     * 
+     * @return the type of the employee as a string
+     */
+    String getEmployeeType();
 
     /**
      * Gets the YTD earnings of the employee.
@@ -72,11 +84,17 @@ public interface IEmployee {
      * 
      * For salary employees, it is pay rate divided by 24 for two payments every month.
      * 
-     * If either type of employee has < 0 hours, they are skipped this payroll period.
+     * If either type of employee has < 0 hours, they are skipped this payroll period. 
+     * (suggestion return null, and skip adding nulls to your paystub list)
      * 
      * Final net pay is calculated as pay - pretaxDeductions - taxes.
      * 
      * All numbers (across all methods) are rounded to the nearest cent. (2 decimal places)
+     * 
+     * SUGGESTION: You may want to use BigDecimal for the calculations to avoid floating point errors.
+     * SUGGESTION: You may want to create an protected abstract calculateGrossPay(double hoursWorked) 
+     * method to calculate the gross pay for the pay period, as runPayroll is exactly
+     * the same for both SalaryEmployee and HourlyEmployee, but calculateGrossPay is different.
      * 
      * @param hoursWorked the hours worked for the pay period
      * 
@@ -84,6 +102,8 @@ public interface IEmployee {
      * 
      */
     IPayStub runPayroll(double hoursWorked);
+
+
 
 
     /**
@@ -100,5 +120,6 @@ public interface IEmployee {
      * @return the employee as a CSV string
      */
     String toCSV();
+
 
 }
