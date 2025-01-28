@@ -230,7 +230,7 @@ When you are completed, you need to submit your code to gradescope. Go back to C
 ## 📝 Grading Rubric
 
 1. Learning 
-   * Code compiles without issue - 20pts
+   * Code compiles without issue - 15pts
    * Code passes all tests  - 30 pts
 2. Approaching 
    * Passes the style check. - 3 pts
@@ -242,6 +242,8 @@ When you are completed, you need to submit your code to gradescope. Go back to C
    * All methods are tested with JUnit tests - 10 pts
    * Method contain proper javadoc comments (not just javadoc notation but proper wording in the comment) - 5 pts
    * Report.md technical questions are questions answered correctly. - 5 pts
+   * Access modifiers: fields and helper methods are private or protected when necessary - 2 pts
+   * Naming convention: constants are all caps, and class names and methods use camel case appropriately - 3 pts
 4. Exceeds 
    * Code is DRY (Don't Repeat Yourself) - 2 pts
    * Student uses proper inheritance without duplication for Employee Structures - 2 pts
@@ -257,8 +259,6 @@ When you are completed, you need to submit your code to gradescope. Go back to C
 
 ### Submission Reminder 🚨
 We have office hours every day. Submit early and ask your course staff for help! If you can't make any of the office hour times, reach out to instructors on Piazza and we'll find a time to meet.
-
-Late submissions get 5% off every day late.
 
 ### Autograder Limitation
 Currently the autograder is limited in how it can test. As such, when it comes across an error it just stops. This means that if you have multiple errors in your code, you may only see the first one. We are working on improving this, but for now, you will need to fix the first error, and then rerun the tests to see the next error. Eventually, if every test passes, you will get the single point. It also may give you points for valid style, while errors exist in the code - so really assume the first 2 points are done together. 
